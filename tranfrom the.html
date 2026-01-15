@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFlow - Modern Business Solutions</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#8b5cf6'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-['Pacifico'] text-primary">logo</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="#features" class="text-gray-700 hover:text-primary transition-colors">Features</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-primary transition-colors">Testimonials</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-primary transition-colors">Pricing</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button hover:bg-blue-600 transition-colors whitespace-nowrap">
+                        Get Started
+                    </button>
+                    <button class="md:hidden w-8 h-8 flex items-center justify-center" id="mobile-menu-btn">
+                        <i class="ri-menu-line text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="md:hidden bg-white border-t border-gray-100 hidden" id="mobile-menu">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-primary transition-colors">Home</a>
+                <a href="#features" class="block py-2 text-gray-700 hover:text-primary transition-colors">Features</a>
+                <a href="#testimonials" class="block py-2 text-gray-700 hover:text-primary transition-colors">Testimonials</a>
+                <a href="#pricing" class="block py-2 text-gray-700 hover:text-primary transition-colors">Pricing</a>
+                <button class="w-full bg-primary text-white px-6 py-2 !rounded-button hover:bg-blue-600 transition-colors whitespace-nowrap mt-4">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-16 min-h-screen flex items-center relative overflow-hidden" style="background-image: url('https://readdy.ai/api/search-image?query=modern%20office%20workspace%20with%20clean%20white%20background%20and%20soft%20blue%20accents%20professional%20business%20environment%20with%20minimalist%20design%20elements%20and%20natural%20lighting%20creating%20a%20serene%20atmosphere%20perfect%20for%20productivity%20and%20innovation%20featuring%20sleek%20technology%20devices%20and%20contemporary%20furniture&width=1920&height=1080&seq=hero-bg&orientation=landscape'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                        Transform Your Business with 
+                        <span class="text-primary">Smart Solutions</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        Streamline operations, boost productivity, and drive growth with our cutting-edge platform designed for modern businesses.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-primary text-white px-8 py-4 !rounded-button hover:bg-blue-600 transition-all transform hover:scale-105 whitespace-nowrap text-lg font-semibold">
+                            Start Free Trial
+                        </button>
+                        <button class="border-2 border-gray-300 text-gray-700 px-8 py-4 !rounded-button hover:border-primary hover:text-primary transition-colors whitespace-nowrap text-lg font-semibold">
+                            Watch Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="hidden lg:block">
+                    <img src="https://readdy.ai/api/search-image?query=modern%20business%20dashboard%20interface%20on%20laptop%20screen%20showing%20analytics%20charts%20and%20data%20visualization%20with%20clean%20design%20professional%20workspace%20setup%20with%20soft%20lighting%20and%20minimal%20background%20featuring%20contemporary%20technology%20and%20sleek%20aesthetic%20elements&width=600&height=400&seq=hero-image&orientation=landscape" 
+                         alt="Business Dashboard Interface" 
+                         class="w-full h-auto rounded-xl shadow-2xl object-cover animate-pulse hover:animate-none transition-all">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Powerful Features for Modern Teams
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Everything you need to manage, analyze, and grow your business in one comprehensive platform.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="ri-dashboard-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Advanced Analytics</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Get deep insights into your business performance with real-time analytics and customizable dashboards.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="ri-team-line text-2xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Team Collaboration</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Seamlessly collaborate with your team members across projects with integrated communication tools.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="ri-shield-check-line text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Enterprise Security</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Keep your data safe with bank-level security, encryption, and compliance with industry standards.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="ri-rocket-line text-2xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Automated Workflows</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Streamline repetitive tasks with intelligent automation and custom workflow builders.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="ri-phone-line text-2xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">24/7 Support</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Get help whenever you need it with our dedicated support team available around the clock.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all transform hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="ri-global-line text-2xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Global Integration</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Connect with over 1000+ popular tools and services to create a unified business ecosystem.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Trusted by Industry Leaders
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    See what our customers have to say about their experience with our platform.
+                </p>
+            </div>
+            
+            <div class="relative">
+                <div class="testimonial-slider overflow-hidden">
+                    <div class="testimonial-track flex transition-transform duration-500 ease-in-out" id="testimonial-track">
+                        <div class="testimonial-slide flex-shrink-0 w-full">
+                            <div class="grid md:grid-cols-3 gap-8">
+                                <div class="bg-gray-50 p-8 rounded-xl">
+                                    <div class="flex items-center mb-6">
+                                        <img src="https://readdy.ai/api/search-image?query=professional%20business%20woman%20headshot%20portrait%20with%20confident%20smile%20wearing%20business%20attire%20against%20clean%20white%20background%20corporate%20executive%20style%20photography%20with%20natural%20lighting%20and%20professional%20appearance&width=80&height=80&seq=testimonial-1&orientation=squarish" 
+                                             alt="Sarah Johnson" 
+                                             class="w-12 h-12 rounded-full object-cover mr-4">
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900">Sarah Johnson</h4>
+                                            <p class="text-sm text-gray-600">CEO, TechCorp</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 leading-relaxed">
+                                        "This platform has completely transformed how we manage our operations. The analytics insights have helped us increase efficiency by 40%."
+                                    </p>
+                                </div>
+                                
+                                <div class="bg-gray-50 p-8 rounded-xl">
+                                    <div class="flex items-center mb-6">
+                                        <img src="https://readdy.ai/api/search-image?query=professional%20business%20man%20headshot%20portrait%20with%20friendly%20expression%20wearing%20suit%20and%20tie%20against%20clean%20background%20corporate%20manager%20style%20photography%20with%20natural%20lighting%20and%20confident%20demeanor&width=80&height=80&seq=testimonial-2&orientation=squarish" 
+                                             alt="Michael Chen" 
+                                             class="w-12 h-12 rounded-full object-cover mr-4">
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900">Michael Chen</h4>
+                                            <p class="text-sm text-gray-600">CTO, InnovateLab</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 leading-relaxed">
+                                        "The integration capabilities are outstanding. We connected all our tools seamlessly and saw immediate productivity gains."
+                                    </p>
+                                </div>
+                                
+                                <div class="bg-gray-50 p-8 rounded-xl">
+                                    <div class="flex items-center mb-6">
+                                        <img src="https://readdy.ai/api/search-image?query=professional%20business%20woman%20headshot%20portrait%20with%20warm%20smile%20wearing%20blazer%20against%20neutral%20background%20corporate%20director%20style%20photography%20with%20soft%20lighting%20and%20approachable%20appearance&width=80&height=80&seq=testimonial-3&orientation=squarish" 
+                                             alt="Emily Rodriguez" 
+                                             class="w-12 h-12 rounded-full object-cover mr-4">
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900">Emily Rodriguez</h4>
+                                            <p class="text-sm text-gray-600">Operations Director, GrowthCo</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 leading-relaxed">
+                                        "Customer support is exceptional. They're always available when we need help and resolve issues quickly and efficiently."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-slide flex-shrink-0 w-full">
+                            <div class="grid md:grid-cols-3 gap-8">
+                                <div class="bg-gray-50 p-8 rounded-xl">
+                                    <div class="flex items-center mb-6">
+                                        <img src="https://readdy.ai/api/search-image?query=professional%20business%20man%20headshot%20portrait%20with%20confident%20expression%20wearing%20business%20shirt%20against%20clean%20background%20corporate%20executive%20style%20photography%20with%20professional%20lighting&width=80&height=80&seq=testimonial-4&orientation=squarish" 
+                                             alt="David Thompson" 
+                                             class="w-12 h-12 rounded-full object-cover mr-4">
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900">David Thompson</h4>
+                                            <p class="text-sm text-gray-600">Founder, StartupHub</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 leading-relaxed">
+                                        "As a startup, we needed a solution that could scale with us. This platform has grown alongside our business perfectly."
+                                    </p>
+                                </div>
+                                
+                                <div class="bg-gray-50 p-8 rounded-xl">
+                                    <div class="flex items-center mb-6">
+                                        <img src="https://readdy.ai/api/search-image?query=professional%20business%20woman%20headshot%20portrait%20with%20professional%20smile%20wearing%20business%20attire%20against%20neutral%20background%20corporate%20manager%20style%20photography%20with%20natural%20lighting&width=80&height=80&seq=testimonial-5&orientation=squarish" 
+                                             alt="Lisa Wang" 
+                                             class="w-12 h-12 rounded-full object-cover mr-4">
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900">Lisa Wang</h4>
+                                            <p class="text-sm text-gray-600">VP Marketing, BrandForce</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 leading-relaxed">
+                                        "The automated workflows have saved us countless hours. We can now focus on strategy instead of manual tasks."
+                                    </p>
+                                </div>
+                                
+                                <div class="bg-gray-50 p-8 rounded-xl">
+                                    <div class="flex items-center mb-6">
+                                        <img src="https://readdy.ai/api/search-image?query=professional%20business%20man%20headshot%20portrait%20with%20friendly%20demeanor%20wearing%20casual%20business%20attire%20against%20clean%20background%20corporate%20team%20lead%20style%20photography%20with%20soft%20lighting&width=80&height=80&seq=testimonial-6&orientation=squarish" 
+                                             alt="James Miller" 
+                                             class="w-12 h-12 rounded-full object-cover mr-4">
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900">James Miller</h4>
+                                            <p class="text-sm text-gray-600">Product Manager, DataFlow</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-700 leading-relaxed">
+                                        "The security features give us peace of mind. We handle sensitive data and trust this platform completely."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center mt-8 space-x-2">
+                    <button class="w-3 h-3 rounded-full bg-primary testimonial-dot active" data-slide="0"></button>
+                    <button class="w-3 h-3 rounded-full bg-gray-300 testimonial-dot" data-slide="1"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Simple, Transparent Pricing
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Choose the perfect plan for your business needs. All plans include our core features with no hidden fees.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="text-center mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Starter</h3>
+                        <div class="mb-4">
+                            <span class="text-4xl font-bold text-gray-900">$29</span>
+                            <span class="text-gray-600">/month</span>
+                        </div>
+                        <p class="text-gray-600">Perfect for small teams getting started</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Up to 5 team members</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Basic analytics dashboard</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Email support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-green-500 mr-3"></i>
+                            <span class="text-gray-700">5GB storage</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full border-2 border-gray-300 text-gray-700 py-3 !rounded-button hover:border-primary hover:text-primary transition-colors whitespace-nowrap font-semibold">
+                        Start Free Trial
+                    </button>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-primary relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-primary text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+                    </div>
+                    
+                    <div class="text-center mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Professional</h3>
+                        <div class="mb-4">
+                            <span class="text-4xl font-bold text-gray-900">$79</span>
+                            <span class="text-gray-600">/month</span>
+                        </div>
+                        <p class="text-gray-600">Ideal for growing businesses</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Up to 25 team members</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Advanced analytics & reports</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Priority support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-green-500 mr-3"></i>
+                            <span class="text-gray-700">100GB storage</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-green-500 mr-3"></i>
+                            <span class="text-gray-700">API access</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full bg-primary text-white py-3 !rounded-button hover:bg-blue-600 transition-colors whitespace-nowrap font-semibold">
+                        Start Free Trial
+                    </button>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="text-center mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Enterprise</h3>
+                        <div class="mb-4">
+                            <span class="text-4xl font-bold text-gray-900">$199</span>
+                            <span class="text-gray-600">/month</span>
+                        </div>
+                        <p class="text-gray-600">For large organizations</p>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Unlimited team members</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Custom analytics & reports</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-green-500 mr-3"></i>
+                            <span class="text-gray-700">24/7 dedicated support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Unlimited storage</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-check-line text-green-500 mr-3"></i>
+                            <span class="text-gray-700">Advanced integrations</span>
+                        </li>
+                    </ul>
+                    
+                    <button class="w-full border-2 border-gray-300 text-gray-700 py-3 !rounded-button hover:border-primary hover:text-primary transition-colors whitespace-nowrap font-semibold">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <span class="text-2xl font-['Pacifico'] text-primary">logo</span>
+                    <p class="text-gray-400 leading-relaxed">
+                        Empowering businesses worldwide with innovative solutions for the modern digital landscape.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Integrations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">API</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Stay updated with our latest news and updates.</p>
+                    <div class="flex gap-2">
+                        <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary">
+                        <button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-blue-600 transition-colors whitespace-nowrap">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">&copy; 2025 TechFlow. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script id="mobile-menu-toggle">
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+    <script id="testimonial-slider">
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.getElementById('testimonial-track');
+            const dots = document.querySelectorAll('.testimonial-dot');
+            let currentSlide = 0;
+            const totalSlides = 2;
+            
+            function updateSlider(slideIndex) {
+                track.style.transform = `translateX(-${slideIndex * 100}%)`;
+                
+                dots.forEach((dot, index) => {
+                    if (index === slideIndex) {
+                        dot.classList.add('bg-primary');
+                        dot.classList.remove('bg-gray-300');
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('bg-primary');
+                        dot.classList.add('bg-gray-300');
+                        dot.classList.remove('active');
+                    }
+                });
+                
+                currentSlide = slideIndex;
+            }
+            
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    updateSlider(index);
+                });
+            });
+            
+            setInterval(() => {
+                const nextSlide = (currentSlide + 1) % totalSlides;
+                updateSlider(nextSlide);
+            }, 5000);
+        });
+    </script>
+
+    <script id="smooth-scroll">
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        const offsetTop = targetSection.offsetTop - 64;
+                        
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
